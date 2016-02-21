@@ -8,6 +8,7 @@
 
 #import "LZLoginViewController.h"
 #import "MBProgressHUD+XMG.h"
+#import "LZConnectTableViewController.h"
 
 @interface LZLoginViewController ()
 /** 账户*/
@@ -71,7 +72,7 @@
     if ([self.accountTextF.text isEqualToString:@"lz"] && [self.pwdTextF.text isEqualToString:@"123"]) {
         // 隐藏登录转圈的页面
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        // 跳转到第二个界面
+        // 跳转到第二个界面,该方法底层会调用一个方法prepareForSegue
         [self performSegueWithIdentifier:@"connect" sender:nil];
     }else {
         // 隐藏登录转圈的页面
@@ -81,13 +82,26 @@
     }
 }
 
+// 找到目标控制器
+// 给目标控制器添加成员属性
+// 赋值
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(nullable id)sender
+{
+//    NSLog(@"%@", segue.sourceViewController);
+//    NSLog(@"%@", segue.destinationViewController);
+    // 获得控制器
+    LZConnectTableViewController *connect = segue.destinationViewController;
+    connect.countName = self.accountTextF.text;
+}
+
 // 结束编辑
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     
 }

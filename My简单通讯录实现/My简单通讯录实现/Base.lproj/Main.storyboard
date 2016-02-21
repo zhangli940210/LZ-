@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgA-Ic-eoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1252.5" y="172.5"/>
+            <point key="canvasLocation" x="-1389.5" y="175.5"/>
         </scene>
         <!--LZ通讯录-->
         <scene sceneID="FER-BF-2IT">
@@ -43,7 +43,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QgO-Yg-wPp">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="lz" borderStyle="roundedRect" placeholder="请输入账号..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QgO-Yg-wPp">
                                         <rect key="frame" x="108" y="29" width="126" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -54,7 +54,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9M-xL-o5E">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" placeholder="请输入密码..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9M-xL-o5E">
                                         <rect key="frame" x="108" y="81" width="126" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -86,7 +86,7 @@
                                     <action selector="autoLogin" destination="azu-aJ-iVJ" eventType="valueChanged" id="n4R-Vl-bkb"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-41-Zlt">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-41-Zlt">
                                 <rect key="frame" x="164" y="339" width="46" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uj5-a9-sxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-841.5" y="81.5"/>
+            <point key="canvasLocation" x="-1311.5" y="64.5"/>
         </scene>
         <!--Connect Table View Controller-->
         <scene sceneID="MjH-3b-I64">
@@ -134,12 +134,15 @@
                             <outlet property="delegate" destination="aYy-DI-V4Y" id="KNq-Cp-rnw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OI1-KX-vXq"/>
+                    <navigationItem key="navigationItem" id="OI1-KX-vXq">
+                        <barButtonItem key="leftBarButtonItem" title="注销" id="KQH-WA-FlO"/>
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="X9U-lK-1nP"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVw-r7-P1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409.5" y="21.5"/>
+            <point key="canvasLocation" x="-891.5" y="26.5"/>
         </scene>
     </scenes>
 </document>

@@ -10,4 +10,7 @@
 
 @interface LZConnectTableViewController : UITableViewController
 
+/** 用户名称*/
+@property (nonatomic, strong) NSString *countName;
+
 @end
