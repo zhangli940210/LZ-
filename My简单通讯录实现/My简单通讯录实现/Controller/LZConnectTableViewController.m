@@ -9,6 +9,7 @@
 #import "LZConnectTableViewController.h"
 #import "LZAddViewController.h"
 #import "LZConnectItem.h"
+#import "LZEditViewController.h"
 
 @interface LZConnectTableViewController () <LZAddViewControllerDelegate>
 
@@ -34,10 +35,18 @@
 //    self.title = [NSString stringWithFormat:@"%@的通讯录", self.countName];
 //    或者
     self.navigationItem.title = [NSString stringWithFormat:@"%@的通讯录", self.countName];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:@"reload" object:nil];
+}
+
+// 更新数据
+- (void)updateData
+{
+    [self.tableView reloadData];
 }
 
 // 注销
-- (IBAction)resign:(id)sender {
+- (IBAction)resign:(id)sender
+{
     // 创建控制器
     UIAlertController *alter = [UIAlertController alertControllerWithTitle:@"确定要退出吗?" message:@"显示的信息" preferredStyle:UIAlertControllerStyleActionSheet];
     // 创建按钮
@@ -60,10 +69,19 @@
 // 给目标控制器添加成员属性
 // 赋值
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{   // 找到目标控制器
-    LZAddViewController *add = segue.destinationViewController;
-    // 设置代理
-    add.delegate = self;
+{
+    if ([segue.destinationViewController isKindOfClass:[LZAddViewController class]]) {
+        // 找到目标控制器
+        LZAddViewController *add = segue.destinationViewController;
+        // 设置代理
+        add.delegate = self;
+    } else {
+        LZEditViewController *edit = segue.destinationViewController;
+        // 选中的那行的indexPath
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        LZConnectItem *item = self.dataArray[indexPath.row];
+        edit.item = item;
+    };
 }
 
 #pragma mark - LZAddViewControllerDelegate方法
