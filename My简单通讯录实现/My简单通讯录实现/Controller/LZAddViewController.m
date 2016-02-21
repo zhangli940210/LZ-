@@ -7,6 +7,7 @@
 //
 
 #import "LZAddViewController.h"
+#import "LZConnectItem.h"
 
 @interface LZAddViewController ()
 
@@ -33,6 +34,15 @@
  *  添加
  */
 - (IBAction)add {
+    // 创建一个模型数据
+    self.item = [LZConnectItem connectItemWithName:self.nameTextF.text phone:self.phoneTextF.text];
+    // 判断
+    if ([self.delegate respondsToSelector:@selector(addViewController:connetItem:)]) {
+        // 调用
+        [self.delegate addViewController:self connetItem:self.item];
+    }
+    // 调整到
+    
 }
 
 // 结束编辑

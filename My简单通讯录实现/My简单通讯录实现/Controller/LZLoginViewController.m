@@ -64,7 +64,8 @@
 /**
  *  登录
  */
-- (IBAction)loginBtnClick {
+- (IBAction)loginBtnClick
+{
     //用户名与密码同时正确时跳转到下一个界面
 //    [MBProgressHUD showMessage:@"正在登录..." toView:self.view];
     // 显示登录转圈的页面

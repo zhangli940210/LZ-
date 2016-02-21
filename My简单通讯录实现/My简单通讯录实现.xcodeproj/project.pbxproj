@@ -35,8 +35,8 @@
 		182FB7AF1C79D74D00AEDE92 /* LZConnectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZConnectTableViewController.m; sourceTree = "<group>"; };
 		182FB7B11C79DB7B00AEDE92 /* LZAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAddViewController.h; sourceTree = "<group>"; };
 		182FB7B21C79DB7B00AEDE92 /* LZAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAddViewController.m; sourceTree = "<group>"; };
-		182FB7B41C79DE5D00AEDE92 /* LZConnectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZConnectItem.h; sourceTree = "<group>"; };
-		182FB7B51C79DE5D00AEDE92 /* LZConnectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZConnectItem.m; sourceTree = "<group>"; };
+		182FB7B41C79DE5D00AEDE92 /* LZConnectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZConnectItem.h; path = ../Others/LZConnectItem.h; sourceTree = "<group>"; };
+		182FB7B51C79DE5D00AEDE92 /* LZConnectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZConnectItem.m; path = ../Others/LZConnectItem.m; sourceTree = "<group>"; };
 		1891E4671C7987DC00B8BC58 /* My简单通讯录实现.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My简单通讯录实现.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1891E46B1C7987DC00B8BC58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1891E4741C7987DC00B8BC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +72,8 @@
 		182FB79B1C79CE5E00AEDE92 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				182FB7B41C79DE5D00AEDE92 /* LZConnectItem.h */,
+				182FB7B51C79DE5D00AEDE92 /* LZConnectItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,8 +83,6 @@
 			children = (
 				182FB79D1C79CE5E00AEDE92 /* AppDelegate.h */,
 				182FB79E1C79CE5E00AEDE92 /* AppDelegate.m */,
-				182FB7B41C79DE5D00AEDE92 /* LZConnectItem.h */,
-				182FB7B51C79DE5D00AEDE92 /* LZConnectItem.m */,
 			);
 			path = Others;
 			sourceTree = "<group>";
