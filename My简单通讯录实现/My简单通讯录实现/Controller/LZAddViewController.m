@@ -10,18 +10,35 @@
 
 @interface LZAddViewController ()
 
+/** 姓名*/
+@property (weak, nonatomic) IBOutlet UITextField *nameTextF;
+/** 电话*/
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextF;
+
 @end
 
 @implementation LZAddViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+}
+
+/**
+ *  添加
+ */
+- (IBAction)add {
+}
+
+// 结束编辑
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 /*
