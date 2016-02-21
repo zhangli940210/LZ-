@@ -41,6 +41,7 @@
 // 更新数据
 - (void)updateData
 {
+    //刷新列表
     [self.tableView reloadData];
 }
 
@@ -110,6 +111,12 @@
     cell.detailTextLabel.text= item.phone;
     return cell;
 }
+
+-(void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
