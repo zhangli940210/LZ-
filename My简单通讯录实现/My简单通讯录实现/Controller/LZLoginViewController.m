@@ -9,6 +9,16 @@
 #import "LZLoginViewController.h"
 
 @interface LZLoginViewController ()
+/** 账户*/
+@property (weak, nonatomic) IBOutlet UITextField *accountTextF;
+/** 密码*/
+@property (weak, nonatomic) IBOutlet UITextField *pwdTextF;
+/** 记住密码*/
+@property (weak, nonatomic) IBOutlet UISwitch *remPwdSwitch;
+/** 自动登录*/
+@property (weak, nonatomic) IBOutlet UISwitch *autoLoginSwitch;
+/** 登录按钮*/
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
 
@@ -17,21 +27,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 添加监听事件
+    [self.accountTextF addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
+    [self.pwdTextF addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
+}
+
+- (void)textChange
+{
+    // 判断，只有accountTextF和pwdTextF都有值，才能让登录按钮可以点击
+    self.loginBtn.enabled = self.accountTextF.text.length && self.pwdTextF.text.length;
+}
+
+/**
+ *  记住密码
+ */
+- (IBAction)remPwd {
+    // 记住密码没有选择，那么自动登录按钮也没有选择
+    if (self.remPwdSwitch.isOn == NO) {
+//        self.autoLoginSwitch.isOn = NO; 该方法报错
+        [self.autoLoginSwitch setOn:NO animated:YES];
+    }
+}
+
+/**
+ *  自动登录
+ */
+- (IBAction)autoLogin {
+    // 自动登录按钮选择了，那么记住密码也选择
+    if (self.autoLoginSwitch.isOn == YES) {
+        [self.remPwdSwitch setOn:YES animated:YES];
+    }
+}
+
+/**
+ *  登录
+ */
+- (IBAction)loginBtnClick {
+    
+}
+
+// 结束编辑
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

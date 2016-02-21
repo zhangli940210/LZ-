@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgA-Ic-eoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-937.5" y="170.5"/>
+            <point key="canvasLocation" x="-1096.5" y="168.5"/>
         </scene>
         <!--LZ通讯录-->
         <scene sceneID="FER-BF-2IT">
@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-tj-4KI">
-                                <rect key="frame" x="41" y="154" width="295" height="139"/>
+                                <rect key="frame" x="40" y="95" width="295" height="139"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="账号:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-WU-uPw">
                                         <rect key="frame" x="60" y="34" width="51" height="21"/>
@@ -63,36 +63,52 @@
                                 <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="记住密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdX-Z4-E0U">
-                                <rect key="frame" x="52" y="348" width="69" height="21"/>
+                                <rect key="frame" x="51" y="277" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自动登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHE-Xm-CXP">
-                                <rect key="frame" x="212" y="348" width="69" height="21"/>
+                                <rect key="frame" x="211" y="277" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-3G-USS">
-                                <rect key="frame" x="129" y="343" width="51" height="31"/>
+                                <rect key="frame" x="128" y="272" width="51" height="31"/>
+                                <connections>
+                                    <action selector="remPwd" destination="azu-aJ-iVJ" eventType="valueChanged" id="cyw-gm-8Fu"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbJ-ol-yvV">
-                                <rect key="frame" x="287" y="343" width="51" height="31"/>
+                                <rect key="frame" x="286" y="272" width="51" height="31"/>
+                                <connections>
+                                    <action selector="autoLogin" destination="azu-aJ-iVJ" eventType="valueChanged" id="n4R-Vl-bkb"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-41-Zlt">
-                                <rect key="frame" x="165" y="410" width="46" height="30"/>
+                                <rect key="frame" x="164" y="339" width="46" height="30"/>
                                 <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="loginBtnClick" destination="azu-aJ-iVJ" eventType="touchUpInside" id="9Rx-rN-64D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="LZ通讯录" id="EgN-21-fD5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="accountTextF" destination="QgO-Yg-wPp" id="y41-IU-YY7"/>
+                        <outlet property="autoLoginSwitch" destination="XbJ-ol-yvV" id="VUl-qY-d7K"/>
+                        <outlet property="loginBtn" destination="TCd-41-Zlt" id="dR8-uS-grI"/>
+                        <outlet property="pwdTextF" destination="n9M-xL-o5E" id="5j5-uF-m47"/>
+                        <outlet property="remPwdSwitch" destination="nVa-3G-USS" id="7ro-OJ-8mx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uj5-a9-sxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-513.5" y="64.5"/>
+            <point key="canvasLocation" x="-685.5" y="91.5"/>
         </scene>
     </scenes>
 </document>
