@@ -7,6 +7,7 @@
 //
 
 #import "LZLoginViewController.h"
+#import "MBProgressHUD+XMG.h"
 
 @interface LZLoginViewController ()
 /** 账户*/
@@ -63,7 +64,21 @@
  *  登录
  */
 - (IBAction)loginBtnClick {
-    
+    //用户名与密码同时正确时跳转到下一个界面
+//    [MBProgressHUD showMessage:@"正在登录..." toView:self.view];
+    // 显示登录转圈的页面
+    [MBProgressHUD showMessage:@"正在登录..." toView:self.view];
+    if ([self.accountTextF.text isEqualToString:@"lz"] && [self.pwdTextF.text isEqualToString:@"123"]) {
+        // 隐藏登录转圈的页面
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        // 跳转到第二个界面
+        [self performSegueWithIdentifier:@"connect" sender:nil];
+    }else {
+        // 隐藏登录转圈的页面
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        // 提醒用户
+        [MBProgressHUD showError:@"用户名与密码错误" toView:self.view];
+    }
 }
 
 // 结束编辑
