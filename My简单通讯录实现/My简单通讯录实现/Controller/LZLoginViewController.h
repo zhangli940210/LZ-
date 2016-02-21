@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LZLoginViewController.h
 //  My简单通讯录实现
 //
 //  Created by apple on 16/2/21.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LZLoginViewController : UIViewController
 
 @end
-

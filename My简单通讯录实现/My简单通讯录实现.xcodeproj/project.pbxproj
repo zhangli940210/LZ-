@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182FB7A01C79CE5E00AEDE92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB79A1C79CE5E00AEDE92 /* ViewController.m */; };
 		182FB7A11C79CE5E00AEDE92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB79E1C79CE5E00AEDE92 /* AppDelegate.m */; };
 		182FB7A81C79CE7800AEDE92 /* MBProgressHUD+XMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB7A41C79CE7800AEDE92 /* MBProgressHUD+XMG.m */; };
 		182FB7A91C79CE7800AEDE92 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 182FB7A51C79CE7800AEDE92 /* MBProgressHUD.bundle */; };
 		182FB7AA1C79CE7800AEDE92 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB7A71C79CE7800AEDE92 /* MBProgressHUD.m */; };
+		182FB7AD1C79CF9500AEDE92 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB7AC1C79CF9500AEDE92 /* LZLoginViewController.m */; };
 		1891E46C1C7987DC00B8BC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891E46B1C7987DC00B8BC58 /* main.m */; };
 		1891E4751C7987DC00B8BC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891E4731C7987DC00B8BC58 /* Main.storyboard */; };
 		1891E4771C7987DC00B8BC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1891E4761C7987DC00B8BC58 /* Assets.xcassets */; };
@@ -19,8 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		182FB7991C79CE5E00AEDE92 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		182FB79A1C79CE5E00AEDE92 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		182FB79D1C79CE5E00AEDE92 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		182FB79E1C79CE5E00AEDE92 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		182FB7A31C79CE7800AEDE92 /* MBProgressHUD+XMG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XMG.h"; sourceTree = "<group>"; };
@@ -28,6 +26,8 @@
 		182FB7A51C79CE7800AEDE92 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		182FB7A61C79CE7800AEDE92 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		182FB7A71C79CE7800AEDE92 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		182FB7AB1C79CF9500AEDE92 /* LZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginViewController.h; sourceTree = "<group>"; };
+		182FB7AC1C79CF9500AEDE92 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginViewController.m; sourceTree = "<group>"; };
 		1891E4671C7987DC00B8BC58 /* My简单通讯录实现.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My简单通讯录实现.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1891E46B1C7987DC00B8BC58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1891E4741C7987DC00B8BC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,8 +50,8 @@
 		182FB7981C79CE5E00AEDE92 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				182FB7991C79CE5E00AEDE92 /* ViewController.h */,
-				182FB79A1C79CE5E00AEDE92 /* ViewController.m */,
+				182FB7AB1C79CF9500AEDE92 /* LZLoginViewController.h */,
+				182FB7AC1C79CF9500AEDE92 /* LZLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182FB7A01C79CE5E00AEDE92 /* ViewController.m in Sources */,
+				182FB7AD1C79CF9500AEDE92 /* LZLoginViewController.m in Sources */,
 				1891E46C1C7987DC00B8BC58 /* main.m in Sources */,
 				182FB7AA1C79CE7800AEDE92 /* MBProgressHUD.m in Sources */,
 				182FB7A81C79CE7800AEDE92 /* MBProgressHUD+XMG.m in Sources */,
