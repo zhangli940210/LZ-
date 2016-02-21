@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextF;
 /** 电话*/
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextF;
+/** 添加*/
+@property (weak, nonatomic) IBOutlet UIButton *addBtn;
 
 @end
 
@@ -22,12 +24,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // 添加监听事件
+    [self.nameTextF addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
+    [self.phoneTextF addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
+- (void)textChange
+{
+    // 判断，只有accountTextF和pwdTextF都有值，才能让登录按钮可以点击
+    self.addBtn.enabled = self.nameTextF.text.length && self.phoneTextF.text.length;
 }
 
 /**
@@ -40,9 +45,9 @@
     if ([self.delegate respondsToSelector:@selector(addViewController:connetItem:)]) {
         // 调用
         [self.delegate addViewController:self connetItem:self.item];
+        // 跳转页面
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    // 调整到
-    
 }
 
 // 结束编辑
@@ -51,14 +56,9 @@
     [self.view endEditing:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
 }
-*/
 
 @end
