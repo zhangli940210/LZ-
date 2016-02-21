@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgA-Ic-eoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1389.5" y="175.5"/>
+            <point key="canvasLocation" x="-1843.5" y="249.5"/>
         </scene>
         <!--LZ通讯录-->
         <scene sceneID="FER-BF-2IT">
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uj5-a9-sxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1311.5" y="64.5"/>
+            <point key="canvasLocation" x="-1822.5" y="112.5"/>
         </scene>
         <!--Connect Table View Controller-->
         <scene sceneID="MjH-3b-I64">
@@ -136,13 +136,65 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="OI1-KX-vXq">
                         <barButtonItem key="leftBarButtonItem" title="注销" id="KQH-WA-FlO"/>
-                        <barButtonItem key="rightBarButtonItem" title="添加" id="X9U-lK-1nP"/>
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="X9U-lK-1nP">
+                            <connections>
+                                <segue destination="31p-Mx-9Go" kind="push" id="REg-se-jJG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVw-r7-P1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-891.5" y="26.5"/>
+            <point key="canvasLocation" x="-1857.5" y="-343.5"/>
+        </scene>
+        <!--添加联系人-->
+        <scene sceneID="HuL-JT-eQK">
+            <objects>
+                <viewController id="31p-Mx-9Go" customClass="LZAddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WwX-p3-Xgi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eu8-ix-yD5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zqI-1R-Rr1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bc-A5-xiN">
+                                <rect key="frame" x="82" y="133" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLb-uD-Dht">
+                                <rect key="frame" x="139" y="129" width="116" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSz-av-Z1K">
+                                <rect key="frame" x="82" y="197" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fof-Vs-vkI">
+                                <rect key="frame" x="139" y="193" width="116" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goh-ll-8ch">
+                                <rect key="frame" x="164" y="261" width="46" height="30"/>
+                                <state key="normal" title="添加"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加联系人" id="Ag2-hB-zXM"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2O-Pv-l8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1302.5" y="-265.5"/>
         </scene>
     </scenes>
 </document>
