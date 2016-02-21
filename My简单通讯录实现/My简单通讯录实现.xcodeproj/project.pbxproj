@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182FB7A01C79CE5E00AEDE92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB79A1C79CE5E00AEDE92 /* ViewController.m */; };
+		182FB7A11C79CE5E00AEDE92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB79E1C79CE5E00AEDE92 /* AppDelegate.m */; };
+		182FB7A81C79CE7800AEDE92 /* MBProgressHUD+XMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB7A41C79CE7800AEDE92 /* MBProgressHUD+XMG.m */; };
+		182FB7A91C79CE7800AEDE92 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 182FB7A51C79CE7800AEDE92 /* MBProgressHUD.bundle */; };
+		182FB7AA1C79CE7800AEDE92 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 182FB7A71C79CE7800AEDE92 /* MBProgressHUD.m */; };
 		1891E46C1C7987DC00B8BC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891E46B1C7987DC00B8BC58 /* main.m */; };
-		1891E46F1C7987DC00B8BC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891E46E1C7987DC00B8BC58 /* AppDelegate.m */; };
-		1891E4721C7987DC00B8BC58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891E4711C7987DC00B8BC58 /* ViewController.m */; };
 		1891E4751C7987DC00B8BC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891E4731C7987DC00B8BC58 /* Main.storyboard */; };
 		1891E4771C7987DC00B8BC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1891E4761C7987DC00B8BC58 /* Assets.xcassets */; };
 		1891E47A1C7987DC00B8BC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891E4781C7987DC00B8BC58 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182FB7991C79CE5E00AEDE92 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		182FB79A1C79CE5E00AEDE92 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		182FB79D1C79CE5E00AEDE92 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		182FB79E1C79CE5E00AEDE92 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		182FB7A31C79CE7800AEDE92 /* MBProgressHUD+XMG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XMG.h"; sourceTree = "<group>"; };
+		182FB7A41C79CE7800AEDE92 /* MBProgressHUD+XMG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XMG.m"; sourceTree = "<group>"; };
+		182FB7A51C79CE7800AEDE92 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		182FB7A61C79CE7800AEDE92 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		182FB7A71C79CE7800AEDE92 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1891E4671C7987DC00B8BC58 /* My简单通讯录实现.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My简单通讯录实现.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1891E46B1C7987DC00B8BC58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1891E46D1C7987DC00B8BC58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1891E46E1C7987DC00B8BC58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1891E4701C7987DC00B8BC58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1891E4711C7987DC00B8BC58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1891E4741C7987DC00B8BC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1891E4761C7987DC00B8BC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1891E4791C7987DC00B8BC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +47,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182FB7981C79CE5E00AEDE92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				182FB7991C79CE5E00AEDE92 /* ViewController.h */,
+				182FB79A1C79CE5E00AEDE92 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		182FB79B1C79CE5E00AEDE92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		182FB79C1C79CE5E00AEDE92 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				182FB79D1C79CE5E00AEDE92 /* AppDelegate.h */,
+				182FB79E1C79CE5E00AEDE92 /* AppDelegate.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		182FB79F1C79CE5E00AEDE92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		182FB7A21C79CE7800AEDE92 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				182FB7A31C79CE7800AEDE92 /* MBProgressHUD+XMG.h */,
+				182FB7A41C79CE7800AEDE92 /* MBProgressHUD+XMG.m */,
+				182FB7A51C79CE7800AEDE92 /* MBProgressHUD.bundle */,
+				182FB7A61C79CE7800AEDE92 /* MBProgressHUD.h */,
+				182FB7A71C79CE7800AEDE92 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		1891E45E1C7987DC00B8BC58 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +110,13 @@
 		1891E4691C7987DC00B8BC58 /* My简单通讯录实现 */ = {
 			isa = PBXGroup;
 			children = (
-				1891E46D1C7987DC00B8BC58 /* AppDelegate.h */,
-				1891E46E1C7987DC00B8BC58 /* AppDelegate.m */,
-				1891E4701C7987DC00B8BC58 /* ViewController.h */,
-				1891E4711C7987DC00B8BC58 /* ViewController.m */,
+				182FB7A21C79CE7800AEDE92 /* MBProgressHUD */,
+				182FB7981C79CE5E00AEDE92 /* Controller */,
+				182FB79B1C79CE5E00AEDE92 /* Model */,
+				182FB79C1C79CE5E00AEDE92 /* Others */,
+				182FB79F1C79CE5E00AEDE92 /* View */,
 				1891E4731C7987DC00B8BC58 /* Main.storyboard */,
 				1891E4761C7987DC00B8BC58 /* Assets.xcassets */,
-				1891E4781C7987DC00B8BC58 /* LaunchScreen.storyboard */,
-				1891E47B1C7987DC00B8BC58 /* Info.plist */,
 				1891E46A1C7987DC00B8BC58 /* Supporting Files */,
 			);
 			path = "My简单通讯录实现";
@@ -74,6 +125,8 @@
 		1891E46A1C7987DC00B8BC58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1891E4781C7987DC00B8BC58 /* LaunchScreen.storyboard */,
+				1891E47B1C7987DC00B8BC58 /* Info.plist */,
 				1891E46B1C7987DC00B8BC58 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1891E47A1C7987DC00B8BC58 /* LaunchScreen.storyboard in Resources */,
+				182FB7A91C79CE7800AEDE92 /* MBProgressHUD.bundle in Resources */,
 				1891E4771C7987DC00B8BC58 /* Assets.xcassets in Resources */,
 				1891E4751C7987DC00B8BC58 /* Main.storyboard in Resources */,
 			);
@@ -150,9 +204,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1891E4721C7987DC00B8BC58 /* ViewController.m in Sources */,
-				1891E46F1C7987DC00B8BC58 /* AppDelegate.m in Sources */,
+				182FB7A01C79CE5E00AEDE92 /* ViewController.m in Sources */,
 				1891E46C1C7987DC00B8BC58 /* main.m in Sources */,
+				182FB7AA1C79CE7800AEDE92 /* MBProgressHUD.m in Sources */,
+				182FB7A81C79CE7800AEDE92 /* MBProgressHUD+XMG.m in Sources */,
+				182FB7A11C79CE5E00AEDE92 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +355,7 @@
 				1891E4801C7987DC00B8BC58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
