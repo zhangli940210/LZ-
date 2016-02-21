@@ -151,7 +151,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="OI1-KX-vXq">
-                        <barButtonItem key="leftBarButtonItem" title="注销" id="KQH-WA-FlO"/>
+                        <barButtonItem key="leftBarButtonItem" title="注销" id="KQH-WA-FlO">
+                            <connections>
+                                <action selector="resign:" destination="aYy-DI-V4Y" id="wpA-yC-JLT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="添加" id="X9U-lK-1nP">
                             <connections>
                                 <segue destination="31p-Mx-9Go" kind="push" id="REg-se-jJG"/>
@@ -218,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2O-Pv-l8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1622.5" y="-251.5"/>
+            <point key="canvasLocation" x="-1431.5" y="-277.5"/>
         </scene>
     </scenes>
 </document>

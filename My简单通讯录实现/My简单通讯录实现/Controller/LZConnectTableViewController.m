@@ -36,6 +36,25 @@
     self.navigationItem.title = [NSString stringWithFormat:@"%@的通讯录", self.countName];
 }
 
+// 注销
+- (IBAction)resign:(id)sender {
+    // 创建控制器
+    UIAlertController *alter = [UIAlertController alertControllerWithTitle:@"确定要退出吗?" message:@"显示的信息" preferredStyle:UIAlertControllerStyleActionSheet];
+    // 创建按钮
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        // 跳转页面
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    // 创建按钮
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    // 添加按钮
+    [alter addAction:action1];
+    [alter addAction:action2];
+    // 显示弹框(相当于show操作)
+    [self presentViewController:alter animated:YES completion:nil];
+}
+
+
 // 调整页面会调用该方法
 // 找到目标控制器
 // 给目标控制器添加成员属性
@@ -56,11 +75,6 @@
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
 #pragma mark - Table view data source
 // 每组多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectio
@@ -68,8 +82,8 @@
     return self.dataArray.count;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *ID = @"data";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     // 获取模型数据
@@ -78,5 +92,9 @@
     cell.detailTextLabel.text= item.phone;
     return cell;
 }
-
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    
+}
 @end
