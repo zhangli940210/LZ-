@@ -36,6 +36,11 @@
 //    或者
     self.navigationItem.title = [NSString stringWithFormat:@"%@的通讯录", self.countName];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:@"reload" object:nil];
+    
+    // 一个小技巧，去掉tableView总没有用到的cell，如果没有这行代码，那么
+    // 后面显示的cell虽然没有数据，但是会出现一根一根的线，为了达到去掉这些一根一根的线
+    // 可以采用该方法
+    self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
 // 更新数据
@@ -112,8 +117,8 @@
     return cell;
 }
 
--(void)dealloc {
-    
+-(void)dealloc
+{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

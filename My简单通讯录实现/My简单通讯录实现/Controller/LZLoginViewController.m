@@ -10,6 +10,12 @@
 #import "MBProgressHUD+XMG.h"
 #import "LZConnectTableViewController.h"
 
+#define kAccountText @"account"
+#define kPwdText @"pwd"
+#define kRemPwd @"remPwd"
+#define kAutoLogin @"autoLogin"
+
+
 @interface LZLoginViewController ()
 /** 账户*/
 @property (weak, nonatomic) IBOutlet UITextField *accountTextF;
@@ -32,6 +38,31 @@
     // 添加监听事件
     [self.accountTextF addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
     [self.pwdTextF addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
+    
+    // 从偏好设置中获取数据
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSString *accout = [def objectForKey:kAccountText];
+    NSString *pwd = [def objectForKey:kPwdText];
+    BOOL remPwd = [def boolForKey:kRemPwd];
+    BOOL autoLogin = [def boolForKey:kAutoLogin];
+    // 设置开关按钮状态
+    self.remPwdSwitch.on = remPwd;
+    self.autoLoginSwitch.on = autoLogin;
+    
+    //如果保存密码
+    if (self.remPwdSwitch.on) { // 如果记住密码按钮状态为on
+        // 给账户文本框和密码文本框赋值
+        self.accountTextF.text = accout;
+        self.pwdTextF.text = pwd;
+        if (self.autoLoginSwitch.on) { // 如果自动登录按钮状态为on
+            // 调用该方法
+            [self loginBtnClick];
+        }
+    }
+    
+    // 进来就判断一下，按钮是否可点击
+    [self textChange];
+    
 }
 
 - (void)textChange
@@ -75,6 +106,16 @@
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         // 跳转到第二个界面,该方法底层会调用一个方法prepareForSegue
         [self performSegueWithIdentifier:@"connect" sender:nil];
+        
+        // 保存到偏好设置
+        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+        [def setObject:self.accountTextF.text forKey:kAccountText];
+        [def setObject:self.pwdTextF.text forKey:kPwdText];
+        [def setBool:self.remPwdSwitch.on forKey:kRemPwd];
+        [def setBool:self.autoLoginSwitch.on forKey:kAutoLogin];
+        
+        // 立即写入
+        [def synchronize]; // iOS9之后可以不写这句代码了
     }else {
         // 隐藏登录转圈的页面
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
