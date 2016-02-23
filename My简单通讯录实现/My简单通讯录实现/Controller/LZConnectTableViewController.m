@@ -86,7 +86,8 @@
         // 选中的那行的indexPath
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         LZConnectItem *item = self.dataArray[indexPath.row];
-        edit.item = item;
+        //把当前选中的行模型传递给下一个控制器
+        edit.connectItem = item;
     };
 }
 

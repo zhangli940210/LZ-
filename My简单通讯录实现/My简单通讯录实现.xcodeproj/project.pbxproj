@@ -70,6 +70,7 @@
 				182FB7B21C79DB7B00AEDE92 /* LZAddViewController.m */,
 				182FB7B71C7A024100AEDE92 /* LZEditViewController.h */,
 				182FB7B81C7A024100AEDE92 /* LZEditViewController.m */,
+				182FB79B1C79CE5E00AEDE92 /* Model */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -80,7 +81,8 @@
 				182FB7B41C79DE5D00AEDE92 /* LZConnectItem.h */,
 				182FB7B51C79DE5D00AEDE92 /* LZConnectItem.m */,
 			);
-			path = Model;
+			name = Model;
+			path = ../Model;
 			sourceTree = "<group>";
 		};
 		182FB79C1C79CE5E00AEDE92 /* Others */ = {
@@ -132,7 +134,6 @@
 			children = (
 				182FB7A21C79CE7800AEDE92 /* MBProgressHUD */,
 				182FB7981C79CE5E00AEDE92 /* Controller */,
-				182FB79B1C79CE5E00AEDE92 /* Model */,
 				182FB79C1C79CE5E00AEDE92 /* Others */,
 				182FB79F1C79CE5E00AEDE92 /* View */,
 				1891E4731C7987DC00B8BC58 /* Main.storyboard */,

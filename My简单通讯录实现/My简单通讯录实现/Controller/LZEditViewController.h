@@ -11,6 +11,6 @@
 
 @interface LZEditViewController : UIViewController
 /** 模型数据*/
-@property (nonatomic, strong) LZConnectItem *item;
+@property (nonatomic, strong) LZConnectItem *connectItem;
 
 @end

@@ -26,8 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.nameTextF.text = self.item.name;
-    self.phoneTextF.text = self.item.phone;
+    self.nameTextF.text = self.connectItem.name;
+    self.phoneTextF.text = self.connectItem.phone;
 }
 
 /**
@@ -59,8 +59,8 @@
         self.editBtn.title = @"编辑";
         
         // 还原数据
-        self.nameTextF.text = self.item.name;
-        self.phoneTextF.text = self.item.phone;
+        self.nameTextF.text = self.connectItem.name;
+        self.phoneTextF.text = self.connectItem.phone;
     }
 }
 
@@ -69,14 +69,20 @@
  */
 - (IBAction)save {
     // 修改数据
-    self.item.name = self.nameTextF.text;
-    self.item.phone = self.phoneTextF.text;
+    self.connectItem.name = self.nameTextF.text;
+    self.connectItem.phone = self.phoneTextF.text;
     //通知联系人控制器.刷新列表.
     [[NSNotificationCenter defaultCenter] postNotificationName:@"reload" object:nil];
     // 跳转页面
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+//- (void)setContactItem:(LZConnectItem *)connectItem {
+//    _connectItem = connectItem;
+//
+//    self.nameTextF.text = self.connectItem.name;
+//    self.phoneTextF.text = self.connectItem.phone;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
